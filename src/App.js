@@ -3,15 +3,22 @@ import './App.css';
 import tw, { styled } from 'twin.macro';
 import { useState } from 'react';
 
+// React Spring
+import { Parallax, ParallaxLayer } from '@react-spring/web'
+
 function App() {
 
-  const [toggle, setToggle] = useState(false);
 
 
   return (
     <>
-      <h1>We all setup now... Nobody can stop this</h1>
-      <h1>Hello</h1>
+      <Parallax pages={2} style={{top: '0', left: '0'}}>
+        <ParallaxLayer
+          offset={0}
+          speed={0.5}
+          style={{ backgroundColor: '#805E73' }}
+        />
+      </Parallax>
     </>
   );
 }
